@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   images: {
-    loader: "custom",
-    loaderFile: "./my-loader.ts",
+    domains: ["cdn.imagin.studio"],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
