@@ -12,30 +12,75 @@
 }
 
 /* START: General styles */
+
 .max-width {
   @apply max-w-[1440px] mx-auto;
+}
+
+@media (max-width: 767px) {
+  .max-width {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .max-width {
+    max-width: 375px;
+  }
 }
 
 .padding-x {
   @apply sm:px-16 px-6;
 }
 
+@media (max-width: 575px) {
+  .padding-x {
+    padding: 0 16px;
+  }
+}
+
 .padding-y {
   @apply py-4;
+}
+
+@media (max-width: 575px) {
+  .padding-y {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 .flex-center {
   @apply flex items-center justify-center;
 }
 
+@media (max-width: 575px) {
+  .flex-center {
+    flex-direction: column;
+  }
+}
+
 .flex-between {
   @apply flex justify-between items-center;
+}
+
+@media (max-width: 575px) {
+  .flex-between {
+    flex-direction: column;
+  }
 }
 
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none w-40;
   flex-direction: row;
 }
+
+@media (max-width: 575px) {
+  .custom-btn {
+    width: 100%;
+  }
+}
+
 /* END: General styles */
 
 /* START: Hero styles */
