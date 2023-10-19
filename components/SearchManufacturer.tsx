@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
@@ -54,14 +53,16 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")} // Reset the search query after the transition completes
           >
             <Combobox.Options
-              className="absolute mt-1 max-h-80 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
               static
             >
               {filteredManufacturers.length === 0 && query !== "" ? (
                 <Combobox.Option
                   value={query}
                   className="search-manufacturer__option"
-                ></Combobox.Option>
+                >
+                  Create "{query}"
+                </Combobox.Option>
               ) : (
                 filteredManufacturers.map((item) => (
                   <Combobox.Option

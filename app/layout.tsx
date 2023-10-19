@@ -1,11 +1,10 @@
-import { relative } from "path";
 import "./globals.css";
-import type { Metadata } from "next";
-import { Footer, Navbar } from "./components";
 
-export const metadata: Metadata = {
-  title: "NexTech",
-  description: "Discover the best car in the world",
+import { Footer, NavBar } from "@/components";
+
+export const metadata = {
+  title: "Car Hub",
+  description: "Discover world's best car showcase application",
 };
 
 export default function RootLayout({
@@ -16,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
-        <Navbar />
+        <NavBar />
         {children}
         <Footer />
       </body>
